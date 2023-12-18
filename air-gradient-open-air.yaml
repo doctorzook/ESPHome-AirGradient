@@ -53,10 +53,10 @@ logger:
 # https://esphome.io/components/api.html
 api:
   encryption:
-    key: !secret home_assistant_encryption_key
+    key: !secret airgradient_oa_home_assistant_encryption_key
 
 ota:
-  password: !secret ota_password
+  password: !secret airgradient_oa_ota_password
 
 wifi:
   networks:
@@ -67,7 +67,7 @@ wifi:
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "${upper_devicename} Hotspot"
-    password: !secret fallback_ssid_password
+    password: !secret airgradient_oa_fallback_ssid_password
 
 # The captive portal is a fallback mechanism for when connecting to the configured WiFi fails.
 # https://esphome.io/components/captive_portal.html
